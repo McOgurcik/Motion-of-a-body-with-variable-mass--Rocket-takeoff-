@@ -87,7 +87,6 @@ def plot_figure(a,m0,mk,enj,tp):
     ax_1.set_title('График зависимости v от t', fontsize=12)
     ax_2.set_xlabel('График зависимости h от t', fontsize=12)
     ax_1.plot(t, v, color='g')
-
     ax_2.plot(t, h, color='r')
     canvas.draw()
 
@@ -97,6 +96,7 @@ layout = [
     sg.Text('m0, т'), sg.Input(20000,enable_events=True,k='-M0-',size=(7, 1)),
     sg.Text('mk, т'), sg.Input(500,enable_events=True,k='-MK-',size=(7, 1)),
     sg.Text('T, c'),sg.Input(120,enable_events=True,k='-T-',size=(7, 1))],
+    [sg.Checkbox('Выключить двигатель при достижении 1 к. скор.', default=False, enable_events=True, k='-ENJ-')],
     # sg.Text('S'), sg.Input(5,enable_events=True,k='-S-',size=(5, 1)),
     # sg.Text(text="xm"),
     # sg.Spin([i for i in range(-200, 200)],
